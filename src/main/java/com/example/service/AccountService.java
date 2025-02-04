@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.repository.AccountRepository;
 import com.example.entity.Account;
+
+import java.lang.StackWalker.Option;
 import java.util.Optional;
 
 @Service
@@ -24,5 +26,11 @@ public class AccountService {
     public Optional<Account> findByUserName(String username) {
         return accountRepository.findByUsername(username);
     }
+
+    public Optional<Account> findByPassword(String password) {
+        return accountRepository.findByPassword(password);
+    }
+
+
 
 }
